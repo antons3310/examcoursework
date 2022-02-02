@@ -3,10 +3,10 @@ package ru.ashebalkin.skypro.course2.lesson6.examcoursework.exception;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-@ResponseStatus(HttpStatus.BAD_REQUEST)
+@ResponseStatus(value = HttpStatus.BAD_REQUEST, reason = "Ответ на данный вопрос уже зарегистрирован")
 public class AllReadyHaveAnswerException extends RuntimeException{
     public AllReadyHaveAnswerException() {
-        super("На данный вопрос ответ уже зарегистрирован");
+        super("Ответ на данный вопрос уже зарегистрирован");
     }
 
     public AllReadyHaveAnswerException(String message) {

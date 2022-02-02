@@ -2,7 +2,6 @@ package ru.ashebalkin.skypro.course2.lesson6.examcoursework.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.ashebalkin.skypro.course2.lesson6.examcoursework.domain.Question;
 import ru.ashebalkin.skypro.course2.lesson6.examcoursework.service.ExaminerService;
