@@ -11,29 +11,29 @@ import ru.ashebalkin.skypro.course2.lesson6.examcoursework.service.QuestionServi
 import java.util.Collection;
 
 @RestController
-@RequestMapping("/java")
-public class JavaQuestionController {
+@RequestMapping("/math")
+public class MathQuestionController {
     private final QuestionService questionService;
 
-    public JavaQuestionController(@Qualifier("javaQuestionService") QuestionService questionService) {
+    public MathQuestionController(@Qualifier("mathQuestionService") QuestionService questionService) {
         this.questionService = questionService;
     }
 
     @GetMapping
     public String helloMessage() {
-        return "Добро пожаловать на экзаменационную страницу с вопросами по любимой Java";
+        return "Добро пожаловать на экзаменационную страницу с вопросами по высшей математике";
     }
 
     @GetMapping("/add")
     public Question addQuestion(@RequestParam("question") String question,
                                 @RequestParam("answer") String answer) {
-        return questionService.add(questionService.add(question,answer));
+        return questionService.add(questionService.add(question, answer));
     }
 
     @GetMapping("/remove")
     public Question removeQuestion(@RequestParam("question") String question,
                                    @RequestParam("answer") String answer) {
-        return questionService.remove(questionService.add(question,answer));
+        return questionService.remove(questionService.add(question, answer));
     }
 
     @GetMapping("/find")
