@@ -8,11 +8,13 @@ import ru.ashebalkin.skypro.course2.lesson6.examcoursework.repository.QuestionRe
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Random;
+
 @Service
-public class JavaQuestionService implements QuestionService{
+public class MathQuestionService implements QuestionService {
+
     private final QuestionRepository questionRepository;
 
-    public JavaQuestionService(@Qualifier("mathQuestionRepository") QuestionRepository questionRepository) {
+    public MathQuestionService(@Qualifier("mathQuestionRepository") QuestionRepository questionRepository) {
         this.questionRepository = questionRepository;
     }
 

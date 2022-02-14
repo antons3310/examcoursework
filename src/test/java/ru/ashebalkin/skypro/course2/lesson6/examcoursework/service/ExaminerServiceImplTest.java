@@ -17,18 +17,23 @@ public class ExaminerServiceImplTest {
     ExaminerServiceImpl out;
 
     @Mock
-    private QuestionService questionServiceMock;
+    private JavaQuestionService javaQuestionServiceMock;
+
+    @Mock
+    private MathQuestionService mathQuestionServiceMock;
 
     @BeforeEach
     public void initTestService() {
-        out = new ExaminerServiceImpl(questionServiceMock);
+        out = new ExaminerServiceImpl(javaQuestionServiceMock, mathQuestionServiceMock);
     }
 
     @Test
     void getQuestionsTest() {
-        when(questionServiceMock.getRandomQuestion()).thenReturn(ETALON_QUESTION_1, ETALON_QUESTION_2, ETALON_QUESTION_3, ETALON_QUESTION_4);
-        when(questionServiceMock.getAll()).thenReturn(EXPECTED_QUESTIONS);
-        assertTrue(EXPECTED_QUESTIONS.containsAll(out.getQuestions(QUESTIONS_COUNT)));
+        when(javaQuestionServiceMock.getRandomQuestion()).thenReturn(JAVA_ETALON_QUESTION_1, JAVA_ETALON_QUESTION_2, JAVA_ETALON_QUESTION_3, JAVA_ETALON_QUESTION_4);
+        when(javaQuestionServiceMock.getAll()).thenReturn(JAVA_EXPECTED_QUESTIONS);
+        when(mathQuestionServiceMock.getRandomQuestion()).thenReturn(MATH_ETALON_QUESTION_1, MATH_ETALON_QUESTION_2, MATH_ETALON_QUESTION_3, MATH_ETALON_QUESTION_4);
+        when(mathQuestionServiceMock.getAll()).thenReturn(MATH_EXPECTED_QUESTIONS);
+        assertTrue(BOTH_EXPECTED_QUESTIONS.containsAll(out.getQuestions(QUESTIONS_COUNT)));
     }
 
     @Test

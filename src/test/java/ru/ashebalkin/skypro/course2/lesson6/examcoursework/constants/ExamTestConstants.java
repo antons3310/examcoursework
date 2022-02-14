@@ -7,23 +7,30 @@ import java.util.Collection;
 import java.util.List;
 
 public class ExamTestConstants {
-    public static final Question ETALON_QUESTION = new Question("Что такое Java", "Java — строго типизированный объектно-ориентированный язык программирования общего назначения, разработанный компанией Sun Microsystems");
-    public static final String RIGHT_QUESTION_TEXT = "Что такое Java";
-    public static final String RIGHT_ANSWER_TEXT = "Java — строго типизированный объектно-ориентированный язык программирования общего назначения, разработанный компанией Sun Microsystems";
-    public static final String WRONG_QUESTION_TEXT = "Что такое Python";
+    public static final Question JAVA_ETALON_QUESTION = new Question("Что такое Java", "Java — строго типизированный объектно-ориентированный язык программирования общего назначения, разработанный компанией Sun Microsystems");
+    public static final Question MATH_ETALON_QUESTION = new Question("Первая координата точки?", "Абсцисса");
+    public static final String JAVA_RIGHT_QUESTION_TEXT = "Что такое Java";
+    public static final String MATH_RIGHT_QUESTION_TEXT = "Первая координата точки?";
+    public static final String JAVA_RIGHT_ANSWER_TEXT = "Java — строго типизированный объектно-ориентированный язык программирования общего назначения, разработанный компанией Sun Microsystems";
+    public static final String MATH_RIGHT_ANSWER_TEXT = "Абсцисса";
+    public static final String JAVA_WRONG_QUESTION_TEXT = "Python";
+    public static final String MATH_WRONG_QUESTION_TEXT = "Ордината";
     public static final Question DUBLICATE_QUESTION = new Question("Этот вопрос уже задавался", "Этот ответ уже был дан");
     public static final Question DUBLICATE_QUESTION_QUESTIONTEXT = new Question("Тут пишем текст вопроса", "Здесь на вопрос отвечаем");
-    public static final Question DUBLICATE_QUESTION__QUESTIONTEXT_ANOTHER_ANSWER = new Question("Тут пишем текст вопроса", "На этот вопрос нет ответа");
+    public static final Question DUBLICATE_QUESTION_QUESTIONTEXT_ANOTHER_ANSWER = new Question("Тут пишем текст вопроса", "На этот вопрос нет ответа");
     public static final Question QUESTION_TO_REMOVE = new Question("Вопрос для удаления", "Этот ответ уже был дан");
-    public static final int QUESTIONS_COUNT = 4;
-    public static final int NOT_ENOUGHT_QUESTION_COUNT = 20;
-    public static final Question ETALON_QUESTION_1 = new Question("Что такое Java", "Java — строго типизированный объектно-ориентированный язык программирования общего назначения, разработанный компанией Sun Microsystems");
-    public static final Question ETALON_QUESTION_2 = new Question("Что такое классы-оболочки", "ЭКлассы-оболочки преобразуют примитивы в ссылочные типы (объекты)");
-    public static final Question ETALON_QUESTION_3 = new Question("Что такое конструкторы?", "Относится к блоку кода, который используется для инициализации объекта. Он должен иметь то же имя, что и класс. Кроме того, он не имеет возвращаемого типа и автоматически вызывается при создании объекта");
-    public static final Question ETALON_QUESTION_4 = new Question("Что такое объект и как он создается?", "Объект – это реальный объект, у которого есть состояние и поведение");
+    public static final int QUESTIONS_COUNT = 8;
+    public static final int NOT_ENOUGHT_QUESTION_COUNT = 40;
+    public static final Question JAVA_ETALON_QUESTION_1 = new Question("Что такое Java", "Java — строго типизированный объектно-ориентированный язык программирования общего назначения, разработанный компанией Sun Microsystems");
+    public static final Question JAVA_ETALON_QUESTION_2 = new Question("Что такое классы-оболочки", "ЭКлассы-оболочки преобразуют примитивы в ссылочные типы (объекты)");
+    public static final Question JAVA_ETALON_QUESTION_3 = new Question("Что такое конструкторы?", "Относится к блоку кода, который используется для инициализации объекта. Он должен иметь то же имя, что и класс. Кроме того, он не имеет возвращаемого типа и автоматически вызывается при создании объекта");
+    public static final Question JAVA_ETALON_QUESTION_4 = new Question("Что такое объект и как он создается?", "Объект – это реальный объект, у которого есть состояние и поведение");
+    public static final Question MATH_ETALON_QUESTION_1 = new Question("Сотая часть числа?", "Процент");
+    public static final Question MATH_ETALON_QUESTION_2 = new Question("Что легче: 1 кг ваты или 1 кг железа?", "Одинаково");
+    public static final Question MATH_ETALON_QUESTION_3 = new Question("Может ли при умножении получиться ноль?", "Да");
+    public static final Question MATH_ETALON_QUESTION_4 = new Question("Чему равна четверть часа?", "15 минут");
 
-
-    public static final Collection<Question> QUESTION_COLLECTION = new ArrayList<>(List.of(
+    public static final Collection<Question> JAVA_QUESTION_COLLECTION = new ArrayList<>(List.of(
             new Question("Почему Java не на 100% объектно-ориентирована",
                     "Потому что в ней используются восемь примитивных типов данных, таких как boolean, byte, char, int, float, double, long, short, которые не являются объектами"),
             new Question("Что такое классы-оболочки",
@@ -46,7 +53,30 @@ public class ExamTestConstants {
                     "Объект – это реальный объект, у которого есть состояние и поведение")
     ));
 
-    public static final Collection<Question> EXPECTED_QUESTIONS = new ArrayList<>(List.of(
+    public static final Collection<Question> MATH_QUESTION_COLLECTION = new ArrayList<>(List.of(
+            new Question("Сотая часть числа?",
+                    "Процент"),
+            new Question("Что легче: 1 кг ваты или 1 кг железа?",
+                    "Одинаково"),
+            new Question("Может ли при умножении получиться ноль?",
+                    "Да"),
+            new Question("Чему равна четверть часа?",
+                    "15 минут"),
+            new Question("Специфическая единица измерения объёма нефти?",
+                    "Баррель."),
+            new Question("Первая координата точки?",
+                    "Абсцисса"),
+            new Question("Наука, изучающая свойства фигур на плоскости?",
+                    "Планиметрия"),
+            new Question("Прибор для измерения углов?",
+                    "Транспортир"),
+            new Question("Учёный, наиболее известным достижением которого стало «решето» для отсеивания простых чисел?",
+                    "Эратосфен"),
+            new Question("Утверждение, требующее доказательства?",
+                    "Теорема")
+    ));
+
+    public static final Collection<Question> JAVA_EXPECTED_QUESTIONS = new ArrayList<>(List.of(
             new Question("Что такое Java",
                     "Java — строго типизированный объектно-ориентированный язык программирования общего назначения, разработанный компанией Sun Microsystems"),
             new Question("Что такое классы-оболочки",
@@ -56,6 +86,37 @@ public class ExamTestConstants {
             new Question("Что такое объект и как он создается?",
                     "Объект – это реальный объект, у которого есть состояние и поведение")
     ));
+
+    public static final Collection<Question> MATH_EXPECTED_QUESTIONS = new ArrayList<>(List.of(
+            new Question("Сотая часть числа?",
+                    "Процент"),
+            new Question("Что легче: 1 кг ваты или 1 кг железа?",
+                    "Одинаково"),
+            new Question("Первая координата точки?",
+                    "Абсцисса"),
+            new Question("Чему равна четверть часа?",
+                    "15 минут")
+    ));
+
+    public static final Collection<Question> BOTH_EXPECTED_QUESTIONS = new ArrayList<>(List.of(
+            new Question("Сотая часть числа?",
+                    "Процент"),
+            new Question("Что легче: 1 кг ваты или 1 кг железа?",
+                    "Одинаково"),
+            new Question("Может ли при умножении получиться ноль?",
+                    "Да"),
+            new Question("Чему равна четверть часа?",
+                    "15 минут"),
+            new Question("Что такое Java",
+                    "Java — строго типизированный объектно-ориентированный язык программирования общего назначения, разработанный компанией Sun Microsystems"),
+            new Question("Что такое классы-оболочки",
+                    "ЭКлассы-оболочки преобразуют примитивы в ссылочные типы (объекты)"),
+            new Question("Что такое конструкторы?",
+                    "Относится к блоку кода, который используется для инициализации объекта. Он должен иметь то же имя, что и класс. Кроме того, он не имеет возвращаемого типа и автоматически вызывается при создании объекта"),
+            new Question("Что такое объект и как он создается?",
+                    "Объект – это реальный объект, у которого есть состояние и поведение")
+    ));
+
 
     public static final Collection<Question> UNEXPECTED_QUESTIONS = new ArrayList<>(List.of(
             new Question("Что такое объект и как он создается?",
